@@ -19,6 +19,7 @@
 <script>
 import {consumirAPIFacade} from '../clients/YesNoClient.js'
 export default {
+  name: 'PreguntaComponent',
     data(){
       return{
         pregunta: null,
@@ -26,8 +27,8 @@ export default {
         imagen:null
       }
     },
-   watch: {
-       pregunta(value,oldValue){
+    watch: {
+       pregunta(value){
         if(!value.includes('?')) return;
         this.consumir();
       }
@@ -45,8 +46,8 @@ export default {
     }
 };
 </script>
-
-<style scoped>
+ 
+<style>
 img {
   height: 100vh;
   width: 100vw;
@@ -58,7 +59,7 @@ img {
 }
 .pregunta-container {
   position: relative;
-  
+ 
   font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   min-height: 100vh; /* altura de toda la pantalla */
@@ -88,7 +89,7 @@ p{
 h2{
     margin-top: 150px;
 }
-body{
-  background-color: rgb(131, 129, 129);
-}
+/*body{
+  background-color: black;
+}*/
 </style>

@@ -27,7 +27,6 @@ function obtenerAleatorio(min,max){
     const data2 = await consumirAPI(vectorNumerico[1]);
     const data3 = await consumirAPI(vectorNumerico[2]);
     const data4 = await consumirAPI(vectorNumerico[3]);
-
     const obj1 = {
         nombre:data1.name,
          id:data1.id
@@ -51,11 +50,11 @@ function obtenerAleatorio(min,max){
     return [obj1,obj2,obj3,obj4];
  }
 
- export async function ObtenerVectorPokemonsFachada(){
+ export async function  obtenerVectorPokemonFacade() {
     const vectorPokemon = obtenerVectorNumerico();
-    return  await obtenerVectorPokemon(vectorPokemon);
+    return await obtenerVectorPokemon(vectorPokemon);
  }
 
-export function obtenerAleatorioFachada(min,max){
+ export function obtenerAleatorioFachada(min,max){
     return obtenerAleatorio(min,max);
 }
